@@ -27,9 +27,6 @@ A from-scratch (NumPy only) implementation of a single sigmoid neuron trained wi
 - Cost: squared error `(pred − target)²`
 - Update: SGD on one random data point per iteration, gradients via the chain rule
 
-
-![one-hot matrix](images/one_hot_matrix.png)
-
 ## Changes / fixes made
 
 1. **Missing waveforms fixed.** Cost was logged only when `i % 100 == 0`, so runs with 100 iterations produced a single point and an empty plot. The log interval now scales with the run length (`max(1, iterations // 100)`), and the four curves are drawn in a 2×2 grid.
@@ -57,6 +54,4 @@ jupyter notebook flowers_G25AIT2020.ipynb
 ├── requirements.txt
 ├── README.md
 ├── .gitignore
-
-    └── one_hot_matrix.png
 ```
